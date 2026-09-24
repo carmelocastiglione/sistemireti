@@ -101,14 +101,14 @@ dispositivi virtuali.
 
 Tra questi possiamo trovare:
 
-  Risorsa fisica   Rappresentazione virtuale
-  ---------------- -------------------------------------
-  CPU              CPU virtuale
-  RAM              Memoria virtuale assegnata alla VM
-  Disco            Disco virtuale
-  Scheda di rete   NIC virtuale
-  USB              Controller/dispositivi USB virtuali
-  BIOS/UEFI        Firmware virtuale
+|  Risorsa fisica   | Rappresentazione virtuale               |
+|  ---------------- | -------------------------------------
+|  CPU              | CPU virtuale                               |
+|  RAM              | Memoria virtuale assegnata alla VM         |
+|  Disco            | Disco virtuale                             |
+|  Scheda di rete   | NIC virtuale                               |
+|  USB              | Controller/dispositivi USB virtuali       |
+|  BIOS/UEFI        | Firmware virtuale                         |
 
 La VM non possiede fisicamente questi componenti: il software di
 virtualizzazione crea un ambiente che permette al sistema operativo
@@ -530,12 +530,12 @@ Le modalità principali che utilizzeremo sono:
 -   Host-only Adapter;
 -   Internal Network.
 
-  Modalità           Internet                  Host          Altre VM
-  ------------------ ------------------------- ------------- ------------------------
-  NAT                Sì                        tramite NAT   secondo configurazione
-  Bridged            Sì, tramite rete fisica   Sì            Sì
-  Host-only          No, normalmente           Sì            Sì
-  Internal Network   No                        No            Sì
+|  Modalità          | Internet                 | Host         | Altre VM |
+|  ------------------| -------------------------| -------------| ------------------------|
+|  NAT               | Sì                       | tramite NAT  | secondo configurazione |
+|  Bridged           | Sì, tramite rete fisica  | Sì           | Sì |
+|  Host-only         | No, normalmente          | Sì           | Sì |
+|  Internal Network  | No                       | No           | Sì |
 
 La modalità esatta e il comportamento possono dipendere dalla
 configurazione della rete.
@@ -597,41 +597,18 @@ quando viene creata una macchina virtuale.
 
 ## Percorso delle lezioni
 
-  -----------------------------------------------------------------------
-  Lezione                 Argomento               Obiettivo principale
-  ----------------------- ----------------------- -----------------------
-  1                       Virtualizzazione e      Comprendere il concetto
-                          VirtualBox              di macchina virtuale
-
-  2                       Creazione della VM      Creare e configurare
-                                                  una macchina virtuale
-
-  3                       Installazione di Linux  Installare un sistema
-                                                  Linux minimale
-
-  4                       Primo utilizzo di Linux Familiarizzare con
-                                                  terminale e sistema
-
-  5                       Risorse hardware        Analizzare CPU, RAM e
-                          virtuali                disco virtuali
-
-  6                       Snapshot e cloni        Salvare e replicare una
-                                                  VM
-
-  7                       Rete della macchina     Comprendere NAT e
-                          virtuale                configurazione IP
-
-  8                       Reti virtuali           Creare una rete tra più
-                          VirtualBox              VM
-
-  9                       Client e server Linux   Realizzare una semplice
-                                                  architettura
-                                                  client/server
-
-  10                      Laboratorio finale      Integrare
-                                                  virtualizzazione, Linux
-                                                  e rete
-  -----------------------------------------------------------------------
+|  Lezione | Argomento                          | Obiettivo principale     |
+|  ------- | ---------------------------------- | ----------------------- |
+|  1       | Virtualizzazione e VirtualBox      | Comprendere il concetto di macchina virtuale |
+|  2       | Creazione della VM                 | Creare e configurare una macchina virtuale |
+|  3       | Installazione di Linux            | Installare un sistema Linux minimale |
+|  4       | Primo utilizzo di Linux           | Familiarizzare con terminale e sistema |
+|  5       | Risorse hardware virtuali        | Analizzare CPU, RAM e disco virtuali |
+|  6       | Snapshot e cloni                 | Salvare e replicare una VM |
+|  7       | Rete della macchina virtuale     | Comprendere NAT e configurazione IP |
+|  8       | Reti virtuali                     | Creare una rete tra più VM |
+|  9       | Client e server Linux           | Realizzare una semplice architettura client/server |
+|  10      | Laboratorio finale              | Integrare virtualizzazione, Linux e rete |
 
 ------------------------------------------------------------------------
 
@@ -701,14 +678,14 @@ Individuare:
 Per ogni elemento, cercare di capire quale componente della macchina
 reale viene rappresentato virtualmente.
 
-  VirtualBox       Concetto reale
-  ---------------- ----------------------------
-  Processori       CPU
-  Memoria          RAM
-  Disco virtuale   Disco
-  Scheda di rete   NIC
-  ISO              Supporto di installazione
-  USB              Controller/dispositivi USB
+|  VirtualBox       | Concetto reale |
+|------------------|----------------|
+| Processori       | CPU            |
+| Memoria          | RAM            |
+| Disco virtuale   | Disco          |
+| Scheda di rete   | NIC            |
+| ISO              | Supporto di installazione |
+| USB              | Controller/dispositivi USB |
 
 ### Attività di riflessione
 
@@ -1066,12 +1043,12 @@ Distinguere:
 
 ## Attività 4 --- Confronto host/guest
 
-  Risorsa               Computer fisico   VM
-  ------------------- ----------------- ----
-  CPU                                   
-  RAM                                   
-  Disco                                 
-  Sistema operativo                     
+|  Risorsa               | Computer fisico   | VM |
+|----------------------|-----------------|----|
+|  CPU                  |                 |    |
+|  RAM                  |                 |    |
+|  Disco                |                 |    |
+|  Sistema operativo    |                 |    |
 
 ### Domanda finale
 
@@ -1305,12 +1282,12 @@ Verificare se Internet è ancora raggiungibile.
 
 Completare:
 
-  Modalità           Internet   Host   Altre VM
-  ------------------ ---------- ------ ----------
-  NAT                                  
-  Host-only                            
-  Bridged                              
-  Internal Network                     
+|  Modalità           | Internet   | Host   | Altre VM |
+|------------------|------------|--------|----------|
+|  NAT             |            |        |          |
+|  Host-only       |            |        |          |
+|  Bridged         |            |        |          |
+|  Internal Network|            |        |          |
 
 ------------------------------------------------------------------------
 
