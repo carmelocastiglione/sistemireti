@@ -237,6 +237,8 @@ ls
 
 ## Attività 6 --- Creare e modificare file
 
+Per creare un file vuoto si utilizza il comando `touch` seguito dal nome del file. Ad esempio:
+
 ``` bash
 touch informazioni.txt
 ```
@@ -244,8 +246,6 @@ touch informazioni.txt
 ``` bash
 ls -l
 ```
-
-Utilizzare:
 
 ``` bash
 nano informazioni.txt
@@ -259,13 +259,95 @@ Per salvare le modifiche e uscire:
 2. Alla richiesta di salvare le modifiche, premere `Y` (Yes, cioè Sì).
 3. Quando viene mostrato il nome `informazioni.txt`, premere `Invio` per confermarlo.
 
-Successivamente:
+Successivamente, per visualizzare il contenuto del file si utilizza il comando `cat` seguito dal nome del file. Ad esempio:
 
 ``` bash
 cat informazioni.txt
 ```
-`cat` è un comando che mostra nel terminale il contenuto di un file.
 
+## Attività 7: cancellare file e directory
+
+``` bash
+rm informazioni.txt
+rmdir lezione1
+rmdir lezione2
+rmdir esercizi
+```
+
+`rm` è il comando per rimuovere file, mentre `rmdir` rimuove directory vuote. Per rimuovere directory non vuote, si può usare `rm -r nome_directory`.
+
+
+## Attività 8 --- Verifica finale e riepilogo
+
+Per consolidare le conoscenze acquisite in questo capitolo, completare il seguente mini-esercizio pratico.
+
+### Procedura
+
+1. Aprire il terminale e verificare la propria identità con:
+
+``` bash
+whoami
+hostname
+pwd
+```
+
+2. Creare una directory chiamata `laboratorio_riepilogo` nella propria home:
+
+``` bash
+mkdir ~/laboratorio_riepilogo
+cd ~/laboratorio_riepilogo
+```
+
+3. Mostrare anche i file nascosti della home e verificare la posizione attuale:
+
+``` bash
+ls -al
+pwd
+```
+
+4. Creare una sottodirectory `esercizi` e un file di testo `note.txt`:
+
+``` bash
+mkdir esercizi
+touch note.txt
+nano note.txt
+```
+
+Nel file, scrivere poche righe con:
+
+- il proprio nome utente;
+- il nome del computer;
+- la data odierna;
+- una frase che descrive cosa si è imparato in questa lezione.
+
+5. Salvare il file e verificare il contenuto con:
+
+``` bash
+cat note.txt
+```
+
+6. Eliminare i file e le directory create durante l'esercizio:
+
+``` bash
+rm note.txt
+rmdir esercizi
+cd ~
+rmdir laboratorio_riepilogo
+```
+
+### Domande di riepilogo
+
+1. Qual è la differenza tra `whoami` e `hostname`?
+2. Che cosa indica `pwd`?
+3. Come si crea una directory e come si entra in essa?
+4. A cosa serve `ls -al` rispetto a `ls`?
+5. Che cosa fa `touch`?
+6. Qual è il comando per aprire un file in terminale con un editor di testo?
+7. Come si rimuove un file e come si rimuove una directory vuota?
+
+### Obiettivo del capitolo
+
+Alla fine di questa attività lo studente deve essere in grado di usare correttamente i comandi basilari del sistema Linux, conoscere la struttura del filesystem e saper creare, modificare e cancellare file e directory in modo sicuro.
 
 ## Riepilogo dei comandi Linux
 
@@ -289,12 +371,13 @@ cat informazioni.txt
 | `ls -l` | Mostra un elenco dettagliato di file e directory. |
 | `cd /` | Sposta la directory corrente alla radice del filesystem. |
 | `cd /home/nome_utente` | Sposta la directory corrente alla home dell'utente indicato. Sostituire `nome_utente` con il proprio nome. |
-| `cd laboratorio` | Entra nella directory `laboratorio`, se si trova nella directory corrente. |
-| `mkdir ~/laboratorio` | Crea la directory `laboratorio` nella home dell'utente. |
-| `mkdir laboratorio` | Crea la directory `laboratorio` nella directory corrente. |
-| `mkdir lezione1`, `mkdir lezione2`, `mkdir esercizi` | Creano le tre sottodirectory per organizzare il lavoro del laboratorio. |
-| `touch informazioni.txt` | Crea il file vuoto se non esiste; se esiste, ne aggiorna la data di modifica. |
-| `nano informazioni.txt` | Apre `informazioni.txt` nell'editor di testo `nano`. |
-| `cat informazioni.txt` | Mostra nel terminale il contenuto del file. |
+| `cd nome_directory` | Entra nella directory `nome_directory`, se si trova nella directory corrente. |
+| `mkdir nome_directory` | Crea una directory con il nome specificato. |
+| `touch nome_file` | Crea il file vuoto se non esiste; se esiste, ne aggiorna la data di modifica. |
+| `nano nome_file` | Apre `nome_file` nell'editor di testo `nano`. |
+| `cat nome_file` | Mostra nel terminale il contenuto del file. |
+| `rm nome_file` | Rimuove il file `nome_file`. |
+| `rmdir nome_directory` | Rimuove la directory vuota `nome_directory`. |
+| `rm -r nome_directory` | Rimuove la directory `nome_directory` e tutto il suo contenuto. |
 
 ------------------------------------------------------------------------
