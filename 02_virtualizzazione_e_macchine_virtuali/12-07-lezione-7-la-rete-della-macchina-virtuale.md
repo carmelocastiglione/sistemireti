@@ -13,9 +13,13 @@ Comprendere:
 
 ## Attività 1 --- Analizzare la configurazione di rete
 
+Per visualizzare la configurazione di rete, utilizzare il comando:
+
 ``` bash
-ip addr
+ip addr show
 ```
+
+Tramite questo comando si possono visualizzare tutte le interfacce di rete e i relativi indirizzi IP.
 
 Individuare l'interfaccia di rete.
 
