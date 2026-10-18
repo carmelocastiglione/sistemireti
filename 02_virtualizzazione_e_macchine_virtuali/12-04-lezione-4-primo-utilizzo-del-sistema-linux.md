@@ -115,7 +115,52 @@ leggere il riepilogo e rispondere `y` per procedere.
 È buona pratica controllare regolarmente la disponibilità di nuovi
 aggiornamenti, non soltanto al primo avvio.
 
-## Attività 4 --- Esplorare il filesystem
+## Attività 4 --- Installare un software
+
+Su Debian i programmi si installano tramite il gestore di pacchetti
+`apt`, che li scarica dai repository ufficiali insieme alle dipendenze
+necessarie. Come esempio si installa `cowsay`, un piccolo programma che
+mostra un messaggio in un fumetto pronunciato da una mucca in ASCII art.
+
+Prima di installare, aggiornare l'elenco dei pacchetti e, se si vuole,
+cercare il pacchetto e leggerne la descrizione:
+
+``` bash
+sudo apt update
+apt search cowsay
+apt show cowsay
+```
+
+Installare il pacchetto (rispondere `y` alla richiesta di conferma):
+
+``` bash
+sudo apt install cowsay
+```
+
+Provare il programma:
+
+``` bash
+cowsay "Ciao, Linux!"
+```
+
+Su Debian `cowsay` può essere installato in `/usr/games`, directory che
+non sempre è nel `PATH` dell'utente normale. Se compare l'errore
+`command not found`, eseguire:
+
+``` bash
+/usr/games/cowsay "Ciao, Linux!"
+```
+
+Per disinstallare il programma:
+
+``` bash
+sudo apt remove cowsay
+```
+
+`remove` elimina il programma ma mantiene i file di configurazione;
+`sudo apt purge cowsay` elimina anche questi ultimi.
+
+## Attività 5 --- Esplorare il filesystem
 
 ``` bash
 pwd
@@ -211,7 +256,7 @@ questi scopi:
 
 Su Debian moderno, `/bin` e `/sbin` possono essere collegamenti alle rispettive directory dentro `/usr`; anche `/lib` può essere un collegamento. Per questo, a seconda dell'installazione, alcune voci possono apparire come collegamenti simbolici o non essere presenti.
 
-## Attività 5 --- Creare una struttura di laboratorio
+## Attività 6 --- Creare una struttura di laboratorio
 
 Il comando `mkdir` (make directory) crea una nuova directory nel percorso indicato. In `mkdir ~/laboratorio`, `~` rappresenta la directory personale dell'utente: viene quindi creata la cartella `laboratorio` al suo interno.
 
@@ -235,7 +280,7 @@ Verificare:
 ls
 ```
 
-## Attività 6 --- Creare e modificare file
+## Attività 7 --- Creare e modificare file
 
 Per creare un file vuoto si utilizza il comando `touch` seguito dal nome del file. Ad esempio:
 
@@ -265,7 +310,7 @@ Successivamente, per visualizzare il contenuto del file si utilizza il comando `
 cat informazioni.txt
 ```
 
-## Attività 7: cancellare file e directory
+## Attività 8 --- Cancellare file e directory
 
 ``` bash
 rm informazioni.txt
@@ -276,8 +321,67 @@ rmdir esercizi
 
 `rm` è il comando per rimuovere file, mentre `rmdir` rimuove directory vuote. Per rimuovere directory non vuote, si può usare `rm -r nome_directory`.
 
+> **Attenzione:** da terminale i file cancellati non vanno nel cestino e non
+> sono recuperabili. Controllare sempre il nome prima di premere `Invio`.
 
-## Attività 8 --- Verifica finale e riepilogo
+## Attività 9 --- Copiare e spostare file e directory
+
+Per questa attività servono di nuovo alcuni file e directory di prova
+(quelli dell'attività precedente sono stati cancellati):
+
+``` bash
+cd ~/laboratorio
+mkdir lezione1 lezione2
+touch informazioni.txt
+```
+
+Il comando `cp` (copy) copia un file: l'originale resta al suo posto.
+
+``` bash
+cp informazioni.txt copia.txt
+cp informazioni.txt lezione1/
+ls
+ls lezione1
+```
+
+Il primo comando crea `copia.txt` nella directory corrente; il secondo
+copia `informazioni.txt` dentro `lezione1`, mantenendo lo stesso nome.
+
+Per copiare una directory con tutto il suo contenuto serve l'opzione
+`-r` (recursive):
+
+``` bash
+cp -r lezione1 lezione1_backup
+```
+
+Il comando `mv` (move) sposta un file o una directory; se la destinazione
+è nella stessa directory, equivale a **rinominare**.
+
+``` bash
+mv copia.txt lezione2/
+mv informazioni.txt note_macchina.txt
+ls
+ls lezione2
+```
+
+Il primo comando sposta `copia.txt` in `lezione2` (il file non è più nella
+posizione originale); il secondo rinomina `informazioni.txt` in
+`note_macchina.txt`.
+
+> **Attenzione:** se la destinazione esiste già, `cp` e `mv` la
+> sovrascrivono senza avvisare. Con l'opzione `-i` (interactive) viene
+> chiesta una conferma, per esempio `cp -i file1 file2`.
+
+Al termine si può ripulire:
+
+``` bash
+rm note_macchina.txt lezione2/copia.txt lezione1/informazioni.txt
+rm -r lezione1_backup
+rmdir lezione1 lezione2
+```
+
+
+## Attività 10 --- Verifica finale e riepilogo
 
 Per consolidare le conoscenze acquisite in questo capitolo, completare il seguente mini-esercizio pratico.
 
@@ -379,5 +483,16 @@ Alla fine di questa attività lo studente deve essere in grado di usare corretta
 | `rm nome_file` | Rimuove il file `nome_file`. |
 | `rmdir nome_directory` | Rimuove la directory vuota `nome_directory`. |
 | `rm -r nome_directory` | Rimuove la directory `nome_directory` e tutto il suo contenuto. |
+| `sudo apt install nome_pacchetto` | Installa il pacchetto indicato, per esempio `cowsay`. |
+| `sudo apt remove nome_pacchetto` | Disinstalla il pacchetto indicato, mantenendo i file di configurazione. |
+| `sudo apt purge nome_pacchetto` | Disinstalla il pacchetto indicato ed elimina anche i suoi file di configurazione. |
+| `apt search parola` | Cerca i pacchetti che contengono la parola indicata. |
+| `apt show nome_pacchetto` | Mostra le informazioni su un pacchetto. |
+| `cowsay "testo"` | Mostra il testo in un fumetto pronunciato da una mucca ASCII (pacchetto `cowsay`). |
+| `cp file1 file2` | Copia `file1` in un nuovo file `file2`. |
+| `cp file directory/` | Copia `file` all'interno di `directory`. |
+| `cp -r dir1 dir2` | Copia la directory `dir1` e tutto il suo contenuto in `dir2`. |
+| `mv file1 file2` | Rinomina `file1` in `file2`. |
+| `mv file directory/` | Sposta `file` all'interno di `directory`. |
 
 ------------------------------------------------------------------------
