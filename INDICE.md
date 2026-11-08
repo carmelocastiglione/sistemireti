@@ -54,3 +54,23 @@ Materiali suddivisi per capitolo.
   - [Scheda di verifica del laboratorio](02_virtualizzazione_e_macchine_virtuali/12-14-scheda-di-verifica-del-laboratorio.md)
   - [Consegna finale per gli studenti](02_virtualizzazione_e_macchine_virtuali/12-15-consegna-finale-per-gli-studenti.md)
   - [Collegamento con il capitolo successivo](02_virtualizzazione_e_macchine_virtuali/12-16-collegamento-con-il-capitolo-successivo.md)
+
+  ## Capitolo 3 - Le basi della comunicazione in rete
+
+  - [Introduzione](03_le_basi_della_comunicazione_in_rete/00-introduzione.md)
+  - [Il segnale: analogico e digitale](03_le_basi_della_comunicazione_in_rete/01-il-segnale.md)
+  - [Le modulazioni digitali](03_le_basi_della_comunicazione_in_rete/02-le-modulazioni-digitali.md)
+  - [Il canale di comunicazione](03_le_basi_della_comunicazione_in_rete/03-il-canale-di-comunicazione.md)
+  - [Il controllo degli errori in trasmissione](03_le_basi_della_comunicazione_in_rete/04-il-controllo-degli-errori-in-trasmissione.md)
+  - [I mezzi di trasmissione](03_le_basi_della_comunicazione_in_rete/05-i-mezzi-di-trasmissione.md)
+  - [Il cavo elettrico](03_le_basi_della_comunicazione_in_rete/06-il-cavo-elettrico.md)
+  - [Lo standard per i cavi twisted pair](03_le_basi_della_comunicazione_in_rete/07-lo-standard-per-i-cavi-twisted-pair.md)
+  - [La trasmissione in fibra ottica](03_le_basi_della_comunicazione_in_rete/08-la-trasmissione-in-fibra-ottica.md)
+  - [La trasmissione wireless](03_le_basi_della_comunicazione_in_rete/09-la-trasmissione-wireless.md)
+  - [La trasmissione su cavo](03_le_basi_della_comunicazione_in_rete/10-la-trasmissione-su-cavo.md)
+  - [Le commutazioni](03_le_basi_della_comunicazione_in_rete/11-le-commutazioni.md)
+  - [Mappa concettuale del capitolo](03_le_basi_della_comunicazione_in_rete/12-mappa-concettuale-del-capitolo.md)
+  - [Tabella riepilogativa](03_le_basi_della_comunicazione_in_rete/13-tabella-riepilogativa.md)
+  - [Domande di autoverifica](03_le_basi_della_comunicazione_in_rete/14-domande-di-autoverifica.md)
+  - [Glossario](03_le_basi_della_comunicazione_in_rete/15-glossario.md)
+  - [Schema finale da ricordare](03_le_basi_della_comunicazione_in_rete/16-schema-finale-da-ricordare.md)
